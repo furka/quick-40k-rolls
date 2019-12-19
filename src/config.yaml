@@ -1,1 +1,223 @@
-text: Hello world
+attackers:
+  - name: Canoptek Wraith
+    attacks: 3
+    bs: 3
+    ap: 2
+    s: 6
+    d: 2
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: null
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    number:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+
+  - name: Destroyer
+    attacks: 3
+    bs: 3
+    ap: 5
+    s: 6
+    d: d3
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: 1
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - Extermination Protocols
+      - My Will Be Done
+    number:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+
+  - name: Destroyer (Heavy)
+    attacks: 1
+    bs: 3
+    ap: 4
+    s: 9
+    d: d6
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: 1
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - Extermination Protocols
+      - My Will Be Done
+    number:
+      - 1
+      - 2
+      - 3
+
+  - name: Immortals (Tesla)
+    attacks: 2
+    bs: 3
+    ap: 0
+    s: 5
+    d: 1
+    hit_mod: 0
+    hit_of_6: 2
+    hit_reroll: null
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - My Will Be Done
+    number:
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+
+  - name: Deathmarks
+    attacks: 1
+    bs: 3
+    ap: 0
+    s: 4
+    d: 1
+    hit_mod: 0
+    hit_of_6: 0
+    hit_reroll: null
+    wound_mod: 0
+    wound_of_6: +mortal
+    wound_reroll: null
+    modifiers:
+      - My Will Be Done
+      - Rapid Fire 1
+    number:
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+
+modifiers:
+  - name: Cover
+    cover: true
+
+  - name: Extermination Protocols
+    hit_reroll: fail
+    wound_reroll: fail
+
+  - name: My Will Be Done
+    hit_mod: 1
+
+  - name: Rapid Fire 1
+    attacks: 1
+
+defenders:
+  - name: Lemon
+    cover: null
+    t: 8
+    wounds: 12
+    save: 3
+    save_mod: 0
+    invulnerable: 0
+    save_reroll: null
+    shake: null
+    modifiers:
+      - Cover
+
+  - name: Guardsmen
+    cover: null
+    t: 3
+    wounds: 1
+    save: 5
+    save_mod: 0
+    invulnerable: 0
+    save_reroll: null
+    shake: null
+    modifiers:
+      - Cover
+
+  - name: Ogryn
+    cover: null
+    t: 5
+    wounds: 3
+    save: 5
+    save_mod: 0
+    invulnerable: 0
+    save_reroll: null
+    shake: null
+    modifiers:
+      - Cover
+
+  - name: Scout Sentinel
+    cover: null
+    t: 5
+    wounds: 6
+    save: 4
+    save_mod: 0
+    invulnerable: 0
+    save_reroll: null
+    shake: null
+    modifiers:
+      - Cover
+
+  - name: Basilisk
+    cover: null
+    t: 6
+    wounds: 11
+    save: 3
+    save_mod: 0
+    invulnerable: 0
+    save_reroll: null
+    shake: null
+    modifiers:
+      - Cover
+
+# just for reference - available options for non-numeric options
+options:
+  hit_of_6:
+    - null
+    - 1roll
+    - 1
+    - 2
+    - autowound
+    - +mortal
+    - mortal
+  hit_reroll:
+    - null
+    - 1
+    - fail
+  wound_of_6:
+    - null
+    - -1
+    - -3
+    - -4
+    - +mortal
+    - mortal
+  wound_reroll:
+    - null
+    - 1
+    - fail
+  cover:
+    - true
+    - null
+  save_reroll:
+    - null
+    - 1
+    - fail
+    - inv_1
+    - inv_fail
+  shake:
+    - null
+    - 6
+    - 56
+    - quantum
