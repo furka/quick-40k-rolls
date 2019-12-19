@@ -1,5 +1,5 @@
 attackers:
-  - name: Canoptek Wraith
+  - name: Canoptek Wraiths
     attacks: 3
     bs: 3
     ap: 2
@@ -19,10 +19,61 @@ attackers:
       - 5
       - 6
 
-  - name: Destroyer
+  - name: Destroyer Lord (Warscythe)
+    attacks: 4
+    bs: 3
+    ap: 4
+    s: 7
+    d: 2
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: 1
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - My Will Be Done
+    number:
+      - 1
+
+  - name: Destroyer Lord (Voidreaper)
+    attacks: 4
+    bs: 3
+    ap: 4
+    s: 99
+    d: 3
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: 1
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - My Will Be Done
+    number:
+      - 1
+
+  - name: Destroyer Lord (Voidreaper vs Vehicle)
+    attacks: 4
+    bs: 3
+    ap: 4
+    s: 7
+    d: 3
+    hit_mod: 0
+    hit_of_6: null
+    hit_reroll: 1
+    wound_mod: 0
+    wound_of_6: null
+    wound_reroll: null
+    modifiers:
+      - My Will Be Done
+    number:
+      - 1
+
+  - name: Destroyers
     attacks: 3
     bs: 3
-    ap: 5
+    ap: 3
     s: 6
     d: d3
     hit_mod: 0
@@ -34,6 +85,8 @@ attackers:
     modifiers:
       - Extermination Protocols
       - My Will Be Done
+      - United in Hatred
+      - Methodical Destruction
     number:
       - 1
       - 2
@@ -42,7 +95,7 @@ attackers:
       - 5
       - 6
 
-  - name: Destroyer (Heavy)
+  - name: Destroyers (Heavy)
     attacks: 1
     bs: 3
     ap: 4
@@ -57,6 +110,8 @@ attackers:
     modifiers:
       - Extermination Protocols
       - My Will Be Done
+      - United in Hatred
+      - Methodical Destruction
     number:
       - 1
       - 2
@@ -76,6 +131,7 @@ attackers:
     wound_reroll: null
     modifiers:
       - My Will Be Done
+      - Methodical Destruction
     number:
       - 5
       - 6
@@ -99,6 +155,7 @@ attackers:
     modifiers:
       - My Will Be Done
       - Rapid Fire 1
+      - Methodical Destruction
     number:
       - 5
       - 6
@@ -107,22 +164,8 @@ attackers:
       - 9
       - 10
 
-modifiers:
-  - name: Cover
-    cover: true
-
-  - name: Extermination Protocols
-    hit_reroll: fail
-    wound_reroll: fail
-
-  - name: My Will Be Done
-    hit_mod: 1
-
-  - name: Rapid Fire 1
-    attacks: 1
-
 defenders:
-  - name: Lemon
+  - name: Lemons
     cover: null
     t: 8
     wounds: 12
@@ -146,7 +189,7 @@ defenders:
     modifiers:
       - Cover
 
-  - name: Ogryn
+  - name: Ogryns
     cover: null
     t: 5
     wounds: 3
@@ -158,7 +201,7 @@ defenders:
     modifiers:
       - Cover
 
-  - name: Scout Sentinel
+  - name: Scout Sentinels
     cover: null
     t: 5
     wounds: 6
@@ -170,7 +213,7 @@ defenders:
     modifiers:
       - Cover
 
-  - name: Basilisk
+  - name: Basilisks
     cover: null
     t: 6
     wounds: 11
@@ -181,6 +224,26 @@ defenders:
     shake: null
     modifiers:
       - Cover
+
+modifiers:
+  - name: Cover
+    cover: true
+
+  - name: Extermination Protocols
+    hit_reroll: fail
+    wound_reroll: fail
+
+  - name: United in Hatred
+    wound_reroll: 1
+
+  - name: My Will Be Done
+    hit_mod: 1
+
+  - name: Methodical Destruction
+    hit_mod: 1
+
+  - name: Rapid Fire 1
+    attacks: 1
 
 # just for reference - available options for non-numeric options
 options:
